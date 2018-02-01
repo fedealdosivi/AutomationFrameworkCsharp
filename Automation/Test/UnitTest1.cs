@@ -8,10 +8,14 @@ namespace Test
     public class UnitTest1
     {
         [TestMethod]
-        public void TestMethod1()
+        public void TestCity_has_Name()
         {
-            var c = new Class1();
-            c.goToGoogle();
-        }
+            var home = new NomadHome();
+            c.GoTo();
+
+            home.GoTo();
+            NomadCity city = home.SelectCity(1);
+
+            Assert.IsTrue(city.HasName(), "City has a name");
     }
 }
