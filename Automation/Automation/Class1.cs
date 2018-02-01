@@ -1,4 +1,5 @@
 ﻿using OpenQA.Selenium.Chrome;
+using OpenQA.Selenium.Firefox;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -11,7 +12,7 @@ namespace Automation
     {
         public void goToGoogle()
         {
-            var driver = new ChromeDriver("C:/Users/federico.palomero/Documents/Projects/C#Automation/Automation/Automation");
+            var driver = new FirefoxDriver("C:/Users/federico.palomero/Documents/Projects/C#Automation/Automation/Automation");
             driver.Navigate().GoToUrl("http://google.com");
         }
     }
