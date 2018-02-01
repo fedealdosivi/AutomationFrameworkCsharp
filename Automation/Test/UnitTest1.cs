@@ -11,11 +11,12 @@ namespace Test
         public void TestCity_has_Name()
         {
             var home = new NomadHome();
-            c.GoTo();
+            home.GoTo();
 
             home.GoTo();
             NomadCity city = home.SelectCity(1);
 
             Assert.IsTrue(city.HasName(), "City has a name");
+        }
     }
 }

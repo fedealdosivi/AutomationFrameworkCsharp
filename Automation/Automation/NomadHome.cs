@@ -20,6 +20,7 @@ namespace Automation
         public NomadCity SelectCity(int pos)
         {
 
+            return new NomadCity();
         }
     }
 }

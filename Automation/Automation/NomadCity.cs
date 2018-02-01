@@ -10,7 +10,7 @@ namespace Automation
     {
         public bool HasName()
         {
-
+            return true;
         }
 
     }
