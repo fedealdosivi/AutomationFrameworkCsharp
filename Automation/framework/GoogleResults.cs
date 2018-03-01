@@ -10,7 +10,7 @@ namespace framework
 
         public GoogleImages SelectImages()
         {
-            var imagesTab=wait.Until(d => d.FindElement(By.CssSelector("#hdtb-msb-vis > div:nth-child(3) > a")));
+            var imagesTab = wait.Until(d => d.FindElement(By.CssSelector("#hdtb-msb-vis > div:nth-child(3) > a")));
             imagesTab.Click();
             return new GoogleImages();
         }

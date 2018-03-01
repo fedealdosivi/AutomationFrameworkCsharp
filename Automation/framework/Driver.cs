@@ -21,6 +21,9 @@ namespace framework
             ChromeOptions options = new ChromeOptions();
             options.AddArguments("--start-maximized");
             Instance = new ChromeDriver(options);
+
+            //FirefoxOptions optionFirefox = new FirefoxOptions();
+            //optionFirefox.AddArguments("--start-maximized");
             //Instance = new FirefoxDriver();
         }
 
