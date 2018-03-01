@@ -12,15 +12,6 @@ x64/
 # build folder is nowadays used for build scripts and should not be ignored
 #build/
 
-# NuGet Packages
-*.nupkg
-# The packages folder can be ignored because of Package Restore
-**/packages/*
-# except build/, which is used as an MSBuild target.
-!**/packages/build/
-# Uncomment if necessary however generally it will be regenerated when needed
-#!**/packages/repositories.config
-
 # MSTest test Results
 [Tt]est[Rr]esult*/
 [Bb]uild[Ll]og.*
@@ -48,20 +39,3 @@ x64/
 *.pidb
 *.log
 *.scc
-
-# Visual C++ cache files
-ipch/
-*.aps
-*.ncb
-*.opensdf
-*.sdf
-*.cachefile
-
-# Visual Studio profiler
-*.psess
-*.vsp
-*.vspx
-
-# VS 2015+
-*.vc.vc.opendb
-*.vc.db
