@@ -18,10 +18,10 @@ namespace framework
 
         public static void Initialize()
         {
-            //ChromeOptions options = new ChromeOptions();
-            //options.AddArguments("--start-maximized");
-            //Instance = new ChromeDriver(options);
-            Instance = new FirefoxDriver();
+            ChromeOptions options = new ChromeOptions();
+            options.AddArguments("--start-maximized");
+            Instance = new ChromeDriver(options);
+            //Instance = new FirefoxDriver();
         }
 
         public static void Close()

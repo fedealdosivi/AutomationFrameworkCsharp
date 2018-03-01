@@ -10,16 +10,14 @@ namespace framework
 
         public GoogleImages SelectImages()
         {
-            wait.Until(d => d.SwitchTo().ActiveElement().GetAttribute("id") == "hdtb-msb");
-            var imagesTab=Driver.Instance.FindElement(By.CssSelector("#hdtb-msb-vis > div:nth-child(2) > a"));
+            var imagesTab=wait.Until(d => d.FindElement(By.CssSelector("#hdtb-msb-vis > div:nth-child(3) > a")));
             imagesTab.Click();
             return new GoogleImages();
         }
 
         public bool VerifyResults()
         {
-            wait.Until(d => d.SwitchTo().ActiveElement().GetAttribute("id") == "rso");
-            var results=Driver.Instance.FindElement(By.Id("rso"));
+            var results= wait.Until(d => d.FindElement(By.Id("rso")));
             return results.Displayed;
         }
 

@@ -52,6 +52,7 @@
     <Compile Include="Driver.cs" />
     <Compile Include="GoogleHome.cs" />
     <Compile Include="GoogleImages.cs" />
+    <Compile Include="GoogleMaps.cs" />
     <Compile Include="GoogleResults.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>

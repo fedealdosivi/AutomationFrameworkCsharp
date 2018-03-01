@@ -16,17 +16,29 @@ namespace TestLibrary
         [TestMethod]
         public void TestSimple()
         {
-            GoogleHome home = new GoogleHome()
-                .Go();
+            GoogleResults results = new GoogleHome()
+                .Go()
+                .Search("hola");
+
+            Assert.IsTrue(results.VerifyResults());
         }
 
         [TestMethod]
-        public void TestSearch()
+        public void TestSettings()
         {
             GoogleResults google = new GoogleHome()
                 .Go()
                 .Search("hola")
                 .SelectSettings();
+        }
+
+        [TestMethod]
+        public void TestImages()
+        {
+            GoogleImages google = new GoogleHome()
+                .Go()
+                .Search("HOLA")
+                .SelectImages();
         }
 
         [TestCleanup]
