@@ -5,13 +5,8 @@ using Microsoft.VisualStudio.TestTools.UnitTesting;
 namespace TestLibrary
 {
     [TestClass]
-    public class GoogleTest
+    public class GoogleTest : WebTest
     {
-        [TestInitialize]
-        public void Init()
-        {
-            Driver.Initialize();
-        }
 
         [TestMethod]
         public void TestSimple()
@@ -39,12 +34,6 @@ namespace TestLibrary
                 .Go()
                 .Search("HOLA")
                 .SelectImages();
-        }
-
-        [TestCleanup]
-        public void TearDown()
-        {
-            Driver.Close();
         }
     }
 }
