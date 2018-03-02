@@ -8,7 +8,7 @@ using System.Threading.Tasks;
 
 namespace framework
 {
-    public class GoogleHome
+    public class GoogleHome : CommonOps
     {
         WebDriverWait wait = new WebDriverWait(Driver.Instance, TimeSpan.FromSeconds(10));
 
@@ -23,8 +23,8 @@ namespace framework
         {
             var googleImg = Driver.Instance.FindElement(By.Id("lga"));
             var searchInput = Driver.Instance.FindElement(By.Name("q"));
-            searchInput.SendKeys(v);
-            searchInput.Submit();
+            Type(searchInput,v);
+            Submit(searchInput);
             wait.Until(ExpectedConditions.StalenessOf(googleImg));
             return new GoogleResults();
         }

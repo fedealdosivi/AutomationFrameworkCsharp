@@ -15,6 +15,7 @@ namespace framework
     public class Driver
     {
         public static IWebDriver Instance { get; set; }
+        public static WebDriverWait Wait;
 
         public static void Initialize()
         {
@@ -27,15 +28,19 @@ namespace framework
             //Instance = new FirefoxDriver();
         }
 
+        public void SetWait(WebDriverWait w)
+        {
+            Wait = w;
+        }
+
+        public WebDriverWait GetWait()
+        {
+            return Wait;
+        }
+
         public static void Close()
         {
             Instance.Close();
-        }
-
-        public static GoogleHome GetGoogleInitialPage()
-        {
-            Instance.Navigate().GoToUrl("https://www.google.com");
-            return new GoogleHome();
         }
     }
 }

@@ -4,14 +4,14 @@ using System;
 
 namespace framework
 {
-    public class GoogleResults
+    public class GoogleResults : CommonOps
     {
         WebDriverWait wait= new WebDriverWait(Driver.Instance, TimeSpan.FromSeconds(10));
 
         public GoogleImages SelectImages()
         {
             var imagesTab = wait.Until(d => d.FindElement(By.CssSelector("#hdtb-msb-vis > div:nth-child(3) > a")));
-            imagesTab.Click();
+            Click(imagesTab);
             return new GoogleImages();
         }
 
@@ -24,7 +24,7 @@ namespace framework
         public GoogleResults SelectSettings()
         {
             var settings = wait.Until(d => d.FindElement(By.Id("hdtb-tls")));
-            settings.Click();
+            Click(settings);
             return this;
         }
     }

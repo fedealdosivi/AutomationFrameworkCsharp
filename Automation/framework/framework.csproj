@@ -48,7 +48,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Browser.cs" />
-    <Compile Include="Class1.cs" />
+    <Compile Include="CommonOps.cs" />
     <Compile Include="Driver.cs" />
     <Compile Include="GoogleHome.cs" />
     <Compile Include="GoogleImages.cs" />
