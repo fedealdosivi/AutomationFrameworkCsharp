@@ -7,7 +7,6 @@ namespace TestLibrary
     [TestClass]
     public class GoogleTest : WebTest
     {
-
         [TestMethod]
         public void TestSimple()
         {
@@ -34,6 +33,15 @@ namespace TestLibrary
                 .Go()
                 .Search("HOLA")
                 .SelectImages();
+        }
+
+        [TestMethod]
+        public void TestMaps()
+        {
+            GoogleMaps maps = new GoogleHome()
+                .Go()
+                .Search("Mar del Plata")
+                .SelectMaps();
         }
     }
 }

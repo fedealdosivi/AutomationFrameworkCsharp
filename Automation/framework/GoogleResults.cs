@@ -15,6 +15,13 @@ namespace framework
             return new GoogleImages();
         }
 
+        public GoogleMaps SelectMaps()
+        {
+            var mapsTab = wait.Until(d => d.FindElement(By.CssSelector("#hdtb-msb-vis > div:nth-child(2) > a")));
+            Click(mapsTab);
+            return new GoogleMaps();
+        }
+
         public bool VerifyResults()
         {
             var results= wait.Until(d => d.FindElement(By.Id("rso")));
